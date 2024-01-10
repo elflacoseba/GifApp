@@ -24,10 +24,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'gif-app'`, () => {
+  it(`should have as title 'Gifs App'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('gif-app');
+    expect(app.title).toEqual('Gifs App');
   });
 
 });
