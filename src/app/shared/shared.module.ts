@@ -5,13 +5,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RightbarComponent } from './components/rightbar/rightbar.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     FooterComponent,
     NavbarComponent,
-    RightbarComponent
+    RightbarComponent,
+    PageHeaderComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +22,8 @@ import { RightbarComponent } from './components/rightbar/rightbar.component';
     SidebarComponent,
     FooterComponent,
     NavbarComponent,
-    RightbarComponent
+    RightbarComponent,
+    PageHeaderComponent
   ]
 })
 export class SharedModule { }
