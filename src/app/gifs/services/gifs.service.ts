@@ -17,8 +17,29 @@ export class GifsService {
     return [...this._tagHistory];
   }
 
-  public searchTag( tag: string ):void {
+  private organizeHistory( tag: string):void {
+    tag= tag.toLocaleLowerCase();
+
+    if ( this.tagsHistory.includes(tag) ) {
+
+      //Retorno todos los tags que son distintos al tag enviado.
+      this._tagHistory = this._tagHistory.filter( (oldTag) => oldTag !== tag  )
+
+    }
+
     this._tagHistory.unshift( tag );
+
+    this._tagHistory = this.tagsHistory.splice(0,10);
+
   }
+
+  public searchTag( tag: string ):void {
+
+    if ( tag.length === 0 ) return;
+
+    this.organizeHistory( tag) ;
+  }
+
+
 
 }
