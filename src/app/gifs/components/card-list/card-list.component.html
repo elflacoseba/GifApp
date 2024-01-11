@@ -1,13 +1,15 @@
-
-  <div class="col-md-3 col-sm-6">
-    <div class="card">
+  <div class="row d-flex justify-content-around">
+    <div *ngFor="let gif of gifs" class="card col-sm-4 col-md-3 ml-1 mr-1 ">
       <div class="card-header">
-        <h5 class="m-0">Featured</h5>
+        <h5 class="m-0 font-weight-bold text-center">{{ gif.title | titlecase }}</h5>
       </div>
       <div class="card-body">
-        <h6 class="card-title">Special title treatment</h6>
-
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <!-- <h6 class="card-title">Special title treatment</h6>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <img
+          [src]="gif.images.downsized_medium.url"
+          [alt]="gif.title"
+          class="w-100">
       </div>
     </div>
   </div>
