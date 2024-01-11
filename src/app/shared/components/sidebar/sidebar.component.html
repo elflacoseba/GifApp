@@ -15,7 +15,7 @@
         <li class="nav-item"
           *ngFor="let tag of tagsHistory"
         >
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" (click)="searchTag( tag )" >
             <i class="far fa-circle nav-icon"></i>
             <p>
                {{ tag | titlecase }}
