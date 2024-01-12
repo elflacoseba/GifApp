@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RightbarComponent } from './components/rightbar/rightbar.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { LazyImageComponent } from './components/lazy-image/lazy-image.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
     FooterComponent,
     NavbarComponent,
     RightbarComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    LazyImageComponent
   ],
   imports: [
     CommonModule
@@ -23,7 +25,8 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
     FooterComponent,
     NavbarComponent,
     RightbarComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    LazyImageComponent
   ]
 })
 export class SharedModule { }

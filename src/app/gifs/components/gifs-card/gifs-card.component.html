@@ -1,11 +1,12 @@
-<div class="card">
+<div class="card  bg-dark">
   <div class="card-header">
-    <h5 class="m-0 font-weight-bold text-center">{{ gif.title | titlecase }}</h5>
+    <h5 class="m-0 font-weight-bold text-center">{{ gif.title || 'Sin título' | titlecase }}</h5>
   </div>
   <div class="card-body">
-    <img
-      [src]="gif.images.downsized_medium.url"
-      [alt]="gif.title"
-      class="w-100">
+      <shared-lazy-image
+        [url]="gif.images.downsized_medium.url"
+        [alt]="gif.title || 'No name'"
+      >
+      </shared-lazy-image>
   </div>
 </div>
