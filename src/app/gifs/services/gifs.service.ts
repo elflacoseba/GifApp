@@ -28,6 +28,12 @@ export class GifsService {
     if ( !localStorage.getItem('History') ) return;
 
     this._tagHistory = JSON.parse( localStorage.getItem('History')! ) ;
+
+    if (this._tagHistory.length > 0)
+    {
+      this.searchTag(this.tagsHistory[0]);
+    }
+
   }
 
   private organizeHistory( tag: string):void {
