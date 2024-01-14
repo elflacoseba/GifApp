@@ -10,10 +10,17 @@
       </shared-lazy-image>
   </div>
   <div class="card-footer text-center">
-    <button class="btn btn-secondary btn-sm"
-    (click)="copyClipboard(gif.images.downsized_medium.url)"
-    title="Copiar al portapapeles">
+    <div class="btn-group">
+      <button class="btn btn-secondary btn-sm"
+      (click)="copyClipboard(gif.images.downsized_medium.url)"
+      title="Copiar al portapapeles">
       Copiar link
     </button>
+    <button class="btn btn-secondary btn-sm"
+      (click)="downloadFile(gif.images.downsized_medium.url, gif.title)"
+      title="Descarga el gif">
+      Descargar
+    </button>
+  </div>
   </div>
 </div>
