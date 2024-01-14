@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ClipboardService } from 'ngx-clipboard';
+
 import { Gif } from '../../interfaces/gifs.interfaces';
 
 @Component({
@@ -8,6 +10,11 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 })
 
 export class GifsCardComponent implements OnInit {
+
+  constructor(
+    private clipboardApi: ClipboardService
+  ) { }
+
   ngOnInit(): void {
     if ( !this.gif ) throw new Error('Gif property is required.');
   }
@@ -16,4 +23,7 @@ export class GifsCardComponent implements OnInit {
   public gif!: Gif;
 
 
+  copyClipboard( url: string ): void {
+    this.clipboardApi.copyFromContent(url);
+  }
 }
